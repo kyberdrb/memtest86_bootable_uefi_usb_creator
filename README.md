@@ -91,42 +91,20 @@ I made this guide for MemTest86, but this can apply for any other UEFI bootable 
   - https://stackoverflow.com/questions/11234858/how-do-you-grep-for-a-string-containing-a-slash
   - https://stackoverflow.com/questions/48131243/remove-digits-from-end-of-string
   - Use of xargs commands in Linux - https://www.programmerall.com/article/54662124051/
-
+  - ---
+  - https://duckduckgo.com/?q=find+exclude+directory&ia=web
+  - https://stackoverflow.com/questions/4210042/how-to-exclude-a-directory-in-find-command
+  - https://stackoverflow.com/questions/4210042/how-to-exclude-a-directory-in-find-command/4210072#4210072
+  - https://duckduckgo.com/?q=find+ommit+the+dot+directory&ia=web
+  - https://duckduckgo.com/?q=find+.+-path+.%2F.git+-prune+-o+-print&ia=web
+  - https://duckduckgo.com/?q=find+.+-mindepth+1+-path+.%2F.git+-prune+-o+-type+f+-print&ia=web
+  - https://duckduckgo.com/?q=find+.+-mindepth+1+-path+.%2F.git+-prune+-o+-type+f+-print+-exec+sh+-c+%22sed+--in-place+%27s%2FCLONEZILLA%2FMEMTEST86%2Fg%27+%22%7B%7D%22%22+%5C%3B&ia=web
+  - https://duckduckgo.com/?q=find+.+-mindepth+1+-path+.%2F.git+-prune+-o+-type+f+-print+-exec+sh+-c+%22%3CLinux_utils_and_gists-REPO_PATH%3E%2Frename_file.sh+%22%7B%7D%22+%22clonezilla%22+%22memtest86%22%22+%5C%3B&ia=web
+  - https://duckduckgo.com/?q=sed+case+sensitive&ia=web&iax=qa
+  - https://duckduckgo.com/?q=sed+is+case+sensitive+by+default&ia=web
 
 - Sources - `install_memtest86_to_prepared_usb.sh`
-  - https://memtest86.org/downloads/download.php?branch=stable
-  - Prepare for legacy BIOS booting - bootable MemTest86 USB for legacy and UEFI firmwares - https://kiljan.org/2019/12/24/memtest86-live-legacy-bios-and-uefi-usb-boot/
-  - https://memtest86.org/memtest86-live.php#make
-  - https://memtest86.org/liveusb.php
-  - https://duckduckgo.com/?q=uefi+usb+partitioning+boot+linux+memtest86&ia=web
-  - http://www.miscdebris.net/blog/2010/04/06/use-curl-to-download-a-file-from-sourceforge-mirror/
-  - https://sourceforge.net/p/memtest86/bugs/349/#fromHistory
-  - https://duckduckgo.com/?q=memtest86+invalid+magic+number&ia=web
-  - #222 EFI boot "error: invalid magic number" caused by search command - https://sourceforge.net/p/memtest86/bugs/222/
-  - search for first occurence of "Work-around" in the original post
-  - https://sourceforge.net/p/memtest86/discussion/MemTest86_live/thread/fb77f6ae6e/
-  - search for "Solution:" in the original post - solved with 'sed' which comments out the specific lines for me
-  - https://duckduckgo.com/?q=memtest86+uefi+secureboot&ia=web
-  - https://sourceforge.net/p/memtest86/discussion/MemTest86_live/thread/6e62e6a7/
-    - As mentioned here:
-
-          http://memtest86.org/downloads.php
-          **"If your machine comes with uEFI secure boot enabled, you have to use AMD64 version of alternative (Ubuntu-based) MemTest86 live."** [emphasis mine]
-
-          Therefore please use those Ubuntu-based MemTest86 live.
-          BTW, for Windows 10, you have to make sure it is completely shut down so that it can be imaged. Here is the info about how to fully shut down Windows 10:
-          http://windowsten.info/tutorials/5767-how-to-fully-shut-down-windows-10
-
-          Steven
-  - https://duckduckgo.com/?q=linux+terminal+download+accelerator&ia=web
-  - https://www.tecmint.com/commandline-download-accelerators-for-linux/
-  - https://archlinux.org/packages/community/x86_64/axel/
-  - https://duckduckgo.com/?q=axel+no+state+file+cannot+resume&ia=web&iax=qa
-      - one way to fix: delete the existing file before downloading
-  - https://duckduckgo.com/?q=axel+no+state+file+cannot+resume&ia=web&iax=qa
-  - https://stackoverflow.com/questions/13217700/dont-download-an-existing-file-with-axel
-  - https://infoheap.com/bash-set-default-value-if-a-variable-is-empty/
-  - sudo dd bs=440 count=1 conv=notrunc if=/tmp/syslinux_inner_package/usr/lib/syslinux/bios/gptmbr.bin of=/dev/sdb
-  - https://wiki.syslinux.org/wiki/index.php?title=Install
-  - https://wiki.syslinux.org/wiki/index.php?title=Mbr
+  - https://www.memtest86.com/download.htm
+  - https://duckduckgo.com/?q=memtest86&ia=web
+  - https://www.reddit.com/r/techsupport/comments/1rpmcd/how_long_does_memtest86_usually_take/
 

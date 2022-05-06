@@ -52,3 +52,4 @@ echo "Verification"
 lsblk -o NAME,FSTYPE,LABEL,UUID "${DISK_DEVICE}"
 echo "========================================="
 sudo parted --script "${DISK_DEVICE}" print
+

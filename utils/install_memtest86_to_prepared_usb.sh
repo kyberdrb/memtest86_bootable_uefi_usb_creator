@@ -21,19 +21,9 @@ udisksctl unmount --block-device ${PARTITION_DEVICE}
 udisksctl mount --block-device ${PARTITION_DEVICE}
 USB_MOUNT_DIR="$(lsblk -oNAME,MOUNTPOINTS "${PARTITION_DEVICE}" | tail --lines=1 | cut --delimiter=' ' --fields=1 --complement)/"
 
-read
-
 sudo 7z x -y "/tmp/memtest86_latest.zip" -o"/tmp/memtest_usb_latest"
-
-read
-
 sudo 7z x -y "/tmp/memtest_usb_latest/memtest86-usb.img" -o"/tmp/memtest_usb_latest_nested"
-
-read
-
 sudo 7z x -y "/tmp/memtest_usb_latest_nested/MemTest86.img" -o"${USB_MOUNT_DIR}"
-
-read
 
 sync
 sudo sync
