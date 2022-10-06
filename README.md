@@ -61,50 +61,55 @@ I made this guide for MemTest86, but this can apply for any other UEFI bootable 
 ## Sources
 
 - Sources - `prepare_usb_for_memtest86_uefi_booting.sh`
-  - https://www.unixmen.com/how-to-format-usb-drive-in-the-terminal/
-  - https://duckduckgo.com/?q=mkfs+fat32&ia=web
-  - https://www.redips.net/linux/create-fat32-usb-drive/
-  - https://duckduckgo.com/?q=mkfs+fat32+noninteractive&ia=web
-  - https://serverfault.com/questions/320590/non-interactively-create-one-partition-with-all-available-disk-size
-  - https://www.gnu.org/software/parted/manual/html_chapter/parted_2.html
-  - https://duckduckgo.com/?q=parted+mkpart+gpt&ia=web
-  - https://www.gnu.org/software/parted/manual/html_node/mkpart.html
-  - https://www.systutorials.com/making-gpt-partition-table-and-creating-partitions-with-parted-on-linux/
-  - https://askubuntu.com/questions/1074515/create-one-partition-occupying-all-the-space-on-the-drive-with-gparted/1287643#1287643
-  - https://rainbow.chard.org/2013/01/30/how-to-align-partitions-for-best-performance-using-parted/
-  - https://unix.stackexchange.com/questions/174157/parted-3-2-says-1024mib-is-outside-of-the-device-of-size-1024mib/174169#174169
-  - Simply leave the calculation [of partition boundaries] to parted using percents as units - https://askubuntu.com/questions/701729/partition-alignment-parted-shows-warning/1145451#1145451
-  - https://www.thegeekdiary.com/how-to-delete-disk-partition-using-parted-command/
-  - https://www.tecmint.com/create-new-ext4-file-system-partition-in-linux/
-  - https://serverfault.com/questions/614019/list-linux-partition-names-only-in-bash/614160#614160
-  - https://linuxhint.com/uuid_storage_devices_linux/
-  - https://devconnected.com/how-to-mount-and-unmount-drives-on-linux/#Unmounting_drives_on_Linux_using_umount
-  - https://duckduckgo.com/?q=add+label+to+partition+parted+fat32&ia=web
-  - https://www.preshweb.co.uk/2008/10/labelling-fatfat32-partitions-in-linux/
-  - https://duckduckgo.com/?q=parted+change+fat+partition+name&ia=web
-  - https://unix.stackexchange.com/questions/44095/how-to-change-the-volume-name-of-a-fat32-filesystem
-  - **https://askubuntu.com/questions/1103569/how-do-i-change-the-label-reported-by-lsblk/1103592#1103592**
-  - https://www.gnu.org/software/parted/manual/html_node/name.html
-  - https://www.thegeekdiary.com/how-to-delete-disk-partition-using-parted-command/
-  - ---
-  - https://stackoverflow.com/questions/6901171/is-d-not-supported-by-greps-basic-expressions
-  - https://stackoverflow.com/questions/11234858/how-do-you-grep-for-a-string-containing-a-slash
-  - https://stackoverflow.com/questions/48131243/remove-digits-from-end-of-string
-  - Use of xargs commands in Linux - https://www.programmerall.com/article/54662124051/
-  - ---
-  - https://duckduckgo.com/?q=find+exclude+directory&ia=web
-  - https://stackoverflow.com/questions/4210042/how-to-exclude-a-directory-in-find-command
-  - https://stackoverflow.com/questions/4210042/how-to-exclude-a-directory-in-find-command/4210072#4210072
-  - https://duckduckgo.com/?q=find+ommit+the+dot+directory&ia=web
-  - https://duckduckgo.com/?q=find+.+-path+.%2F.git+-prune+-o+-print&ia=web
-  - https://duckduckgo.com/?q=find+.+-mindepth+1+-path+.%2F.git+-prune+-o+-type+f+-print&ia=web
-  - https://duckduckgo.com/?q=find+.+-mindepth+1+-path+.%2F.git+-prune+-o+-type+f+-print+-exec+sh+-c+%22sed+--in-place+%27s%2FCLONEZILLA%2FMEMTEST86%2Fg%27+%22%7B%7D%22%22+%5C%3B&ia=web
-  - https://duckduckgo.com/?q=find+.+-mindepth+1+-path+.%2F.git+-prune+-o+-type+f+-print+-exec+sh+-c+%22%3CLinux_utils_and_gists-REPO_PATH%3E%2Frename_file.sh+%22%7B%7D%22+%22clonezilla%22+%22memtest86%22%22+%5C%3B&ia=web
-  - https://duckduckgo.com/?q=sed+case+sensitive&ia=web&iax=qa
-  - https://duckduckgo.com/?q=sed+is+case+sensitive+by+default&ia=web
+    - https://www.unixmen.com/how-to-format-usb-drive-in-the-terminal/
+    - https://duckduckgo.com/?q=mkfs+fat32&ia=web
+    - https://www.redips.net/linux/create-fat32-usb-drive/
+    - https://duckduckgo.com/?q=mkfs+fat32+noninteractive&ia=web
+    - https://serverfault.com/questions/320590/non-interactively-create-one-partition-with-all-available-disk-size
+    - https://www.gnu.org/software/parted/manual/html_chapter/parted_2.html
+    - https://duckduckgo.com/?q=parted+mkpart+gpt&ia=web
+    - https://www.gnu.org/software/parted/manual/html_node/mkpart.html
+    - https://www.systutorials.com/making-gpt-partition-table-and-creating-partitions-with-parted-on-linux/
+    - https://askubuntu.com/questions/1074515/create-one-partition-occupying-all-the-space-on-the-drive-with-gparted/1287643#1287643
+    - https://rainbow.chard.org/2013/01/30/how-to-align-partitions-for-best-performance-using-parted/
+    - https://unix.stackexchange.com/questions/174157/parted-3-2-says-1024mib-is-outside-of-the-device-of-size-1024mib/174169#174169
+    - Simply leave the calculation [of partition boundaries] to parted using percents as units - https://askubuntu.com/questions/701729/partition-alignment-parted-shows-warning/1145451#1145451
+    - https://www.thegeekdiary.com/how-to-delete-disk-partition-using-parted-command/
+    - https://www.tecmint.com/create-new-ext4-file-system-partition-in-linux/
+    - https://serverfault.com/questions/614019/list-linux-partition-names-only-in-bash/614160#614160
+    - https://linuxhint.com/uuid_storage_devices_linux/
+    - https://devconnected.com/how-to-mount-and-unmount-drives-on-linux/#Unmounting_drives_on_Linux_using_umount
+    - https://duckduckgo.com/?q=add+label+to+partition+parted+fat32&ia=web
+    - https://www.preshweb.co.uk/2008/10/labelling-fatfat32-partitions-in-linux/
+    - https://duckduckgo.com/?q=parted+change+fat+partition+name&ia=web
+    - https://unix.stackexchange.com/questions/44095/how-to-change-the-volume-name-of-a-fat32-filesystem
+    - **https://askubuntu.com/questions/1103569/how-do-i-change-the-label-reported-by-lsblk/1103592#1103592**
+    - https://www.gnu.org/software/parted/manual/html_node/name.html
+    - https://www.thegeekdiary.com/how-to-delete-disk-partition-using-parted-command/
+    - ---
+    - https://stackoverflow.com/questions/6901171/is-d-not-supported-by-greps-basic-expressions
+    - https://stackoverflow.com/questions/11234858/how-do-you-grep-for-a-string-containing-a-slash
+    - https://stackoverflow.com/questions/48131243/remove-digits-from-end-of-string
+    - Use of xargs commands in Linux - https://www.programmerall.com/article/54662124051/
+    - ---
+    - https://duckduckgo.com/?q=find+exclude+directory&ia=web
+    - https://stackoverflow.com/questions/4210042/how-to-exclude-a-directory-in-find-command
+    - https://stackoverflow.com/questions/4210042/how-to-exclude-a-directory-in-find-command/4210072#4210072
+    - https://duckduckgo.com/?q=find+ommit+the+dot+directory&ia=web
+    - https://duckduckgo.com/?q=find+.+-path+.%2F.git+-prune+-o+-print&ia=web
+    - https://duckduckgo.com/?q=find+.+-mindepth+1+-path+.%2F.git+-prune+-o+-type+f+-print&ia=web
+    - https://duckduckgo.com/?q=find+.+-mindepth+1+-path+.%2F.git+-prune+-o+-type+f+-print+-exec+sh+-c+%22sed+--in-place+%27s%2FCLONEZILLA%2FMEMTEST86%2Fg%27+%22%7B%7D%22%22+%5C%3B&ia=web
+    - https://duckduckgo.com/?q=find+.+-mindepth+1+-path+.%2F.git+-prune+-o+-type+f+-print+-exec+sh+-c+%22%3CLinux_utils_and_gists-REPO_PATH%3E%2Frename_file.sh+%22%7B%7D%22+%22clonezilla%22+%22memtest86%22%22+%5C%3B&ia=web
+    - https://duckduckgo.com/?q=sed+case+sensitive&ia=web&iax=qa
+    - https://duckduckgo.com/?q=sed+is+case+sensitive+by+default&ia=web
 
 - Sources - `install_memtest86_to_prepared_usb.sh`
   - https://www.memtest86.com/download.htm
   - https://duckduckgo.com/?q=memtest86&ia=web
   - https://www.reddit.com/r/techsupport/comments/1rpmcd/how_long_does_memtest86_usually_take/
+
+- Sources: `make_memtest86_usb.sh`
+  - https://forums.linuxmint.com/viewtopic.php?p=1891954#p1891954
+  - https://duckduckgo.com/?q=bash+set+unset&ia=web
+  - https://towardsdev.com/what-does-set-u-mean-in-a-bash-script-52b048271741
 

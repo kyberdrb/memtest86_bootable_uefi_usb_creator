@@ -5,9 +5,9 @@ set -x
 DISK_NAME="$1"
 DISK_DEVICE="/dev/${DISK_NAME}"
 
-ALREADY_DOWNLOADED_MEMTEST86_ISO="$2:-"/tmp/memtest86_latest.zip""
+ALREADY_DOWNLOADED_MEMTEST86_ISO="$2:-"""
 
-if [ ! -f "${ALREADY_DOWNLOADED_MEMTEST86_ISO}" ]
+if [ ! -r "/tmp/memtest86_latest.zip" ]
 then
   axel --verbose --num-connections=10 \
       https://www.memtest86.com/downloads/memtest86-usb.zip --output=/tmp/memtest86_latest.zip
